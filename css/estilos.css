@@ -30,4 +30,59 @@ h2 {
   font-size: 20px;
   margin: 0 0 0 0; }
 
+footer .redes-sociales {
+  background: #1e2b38;
+  padding: 60px 0; }
+
+footer .copyright {
+  background: #1e2b38;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 0 0 0; }
+
+footer .redes-sociales .contenedor {
+  display: flex;
+  justify-content: center; }
+
+footer .redes-sociales .contenedor a {
+  color: #fff;
+  text-align: center;
+  width: 100px;
+  padding: 15px 0;
+  display: block;
+  /*Pone uno debajo de otro*/
+  border-radius: 3px;
+  font-size: 30px;
+  background: #ccc;
+  margin: 0 20px; }
+
+footer .redes-sociales .contenedor .twitter {
+  background: #1da1f2;
+  opacity: 0.6; }
+
+footer .redes-sociales .contenedor .facebook {
+  background: #1877f2;
+  opacity: 0.6; }
+
+footer .redes-sociales .contenedor .instagram {
+  background: #405de6;
+  opacity: 0.6; }
+
+footer .redes-sociales .contenedor .youtube {
+  background: #ff0000;
+  opacity: 0.6; }
+
+footer .redes-sociales .contenedor .twitter:hover {
+  opacity: 1; }
+
+footer .redes-sociales .contenedor .facebook:hover {
+  opacity: 1; }
+
+footer .redes-sociales .contenedor .instagram:hover {
+  opacity: 1; }
+
+footer .redes-sociales .contenedor .youtube:hover {
+  opacity: 1; }
+
 /*# sourceMappingURL=estilos.css.map */
