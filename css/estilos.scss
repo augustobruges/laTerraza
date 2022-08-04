@@ -9,8 +9,30 @@ body{
 	background: rgba(0, 0, 0, 0.8);
 }
 
+h1{
+	color:#ff4c4c;
+
+	 -webkit-text-stroke: 0.5px #f3f4f7;
+	 -moz-text-stroke: 0.5px black #f3f4f7;
+	 text-stroke: 0.5px black #f3f4f7; /*Borde*/
+
+	 font-family: 'Holtwood One SC', serif;
+
+	 /*
+	    font-family: 'Holtwood One SC', serif;
+    	font-family: 'Niconne', cursive;
+    	font-family: 'Open Sans', sans-serif;
+	 */
+
+	/*text-shadow: 0 0 10px #fff;*/ /*Aplicar sobmra*/
+	
+	font-size: 36px;
+	margin: 0 0 0 0;
+}
+
 h2{
-	color:#fefefe;
-	font-size: 16px;
-	margin: 20px;
+	color:#f3f4f7;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	margin: 0 0 0 0;
 }
