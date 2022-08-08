@@ -1,35 +1,133 @@
-* {
-  padding: 0;
-  margin: 0;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 body {
-  background: rgba(0, 0, 0, 0.8); }
+  /*background: rgba(0, 0, 0, 0.8);*/
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px; }
 
-h1 {
-  color: #ff4c4c;
-  -webkit-text-stroke: 0.5px #f3f4f7;
-  -moz-text-stroke: 0.5px black #f3f4f7;
-  text-stroke: 0.5px black #f3f4f7;
-  /*Borde*/
-  font-family: 'Holtwood One SC', serif;
-  	 /*
-  	    font-family: 'Holtwood One SC', serif;
-      	font-family: 'Niconne', cursive;
-      	font-family: 'Open Sans', sans-serif;
-  	 */
-  /*text-shadow: 0 0 10px #fff;*/
-  /*Aplicar sobmra*/
-  font-size: 36px;
-  margin: 0 0 0 0; }
+.contenedor {
+  width: 85%;
+  max-width: 1000px;
+  margin: auto;
+  /*Sirve para centrar el contenido*/
+  overflow: hidden; }
 
-h2 {
+/********************************** */
+/********* HEADER  **************** */
+/********************************** */
+header {
+  width: 100%;
+  background: url("../img/15.jpg") rgba(219, 183, 183, 0.6);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center 0; }
+  header .contenedor {
+    position: relative;
+    height: 700px; }
+  header .menu {
+    width: 100%;
+    text-align: right; }
+    header .menu a {
+      color: #f3f4f7;
+      font-size: 20px;
+      font-weight: 300;
+      display: inline-block;
+      /*Para poner los elementos unos al lado del otro*/
+      margin: 40px 20px;
+      text-decoration: none;
+      /*Quitar el subrayado*/
+      position: relative; }
+    header .menu a:hover {
+      text-decoration: underline;
+      /*poner el subrayado*/ }
+
+/*Uitlizamos flexbox*/
+header .contenedor-texto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /*Centrar contenido* con flex verticalmente*/
+  align-content: center;
+  /*centrar contenido con flex horizontalmente*/
+  margin: 190px 0; }
+
+header .contenedor-texto .texto {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 60px;
+  position: absolute;
+  margin-top: -52px; }
+
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h3 {
   color: #f3f4f7;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  margin: 0 0 0 0; }
+  font-weight: 300;
+  margin: 0; }
 
+header .contenedor-texto .texto .nombre {
+  	/*color:#ff4c4c;
+  
+  	-webkit-text-stroke: 0.5px #f3f4f7;
+  	 -moz-text-stroke: 0.5px black #f3f4f7;
+  	 text-stroke: 0.5px black #f3f4f7; */
+  font-family: 'Holtwood One SC', serif;
+  margin-bottom: 10px;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold; }
+
+header .contenedor-texto .texto .tipo {
+  margin-bottom: 10px;
+  font-size: 28px;
+  line-height: 25px; }
+
+/********************************** */
+/********* MAIN  **************** */
+/********************************** */
+.main {
+  background: url("../img/textura.jpg");
+  background-repeat: repeat; }
+  .main .acerca-de .contenedor {
+    overflow: visible;
+    /*Para que la imagen no se corte y quede superpuesta*/
+    position: relative; }
+  .main .acerca-de .foto {
+    width: 80%;
+    position: absolute;
+    /*La foto esta mas arriba*/
+    left: 0;
+    top: -70px;
+    /*Para subir la imagen*/
+    z-index: 0;
+    /*Delante o detras de algun objeto. Posicion de profundidad*/
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35); }
+    .main .acerca-de .foto img {
+      width: 100%;
+      vertical-align: top; }
+  .main .acerca-de article {
+    background: #fff;
+    padding: 40px;
+    width: 50%;
+    position: relative;
+    /*top: 500px;*/
+    top: 300px;
+    z-index: 1;
+    /*Delante o detras de algun objeto. Posicion de profundidad*/
+    float: right;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35); }
+    .main .acerca-de article h3 {
+      font-size: 50px;
+      font-weight: 300;
+      margin-top: 10px;
+      margin-bottom: 40px; }
+    .main .acerca-de article p {
+      line-height: 20px;
+      margin-bottom: 15px;
+      text-align: justify; }
+
+/********************************** */
+/********* FOOTER  **************** */
+/********************************** */
 footer .redes-sociales {
   background: #1e2b38;
   padding: 60px 0; }
