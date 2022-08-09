@@ -366,16 +366,16 @@ footer .redes-sociales .contenedor .youtube:hover {
 
   .main .acerca-de article {
     position: relative;
-    width: 100%;
-    top: -100px;
-    transform: translate(0px, 0); }
+    width: 80%;
+    top: -120px;
+    transform: translate(-20px, 0px); }
+
+  .main .servicios {
+    padding-top: 0px; }
 
   .main .servicios .contenedor-servicios .servicio {
     width: 32%;
     /*Para que quepan 3 imagenes*/ }
-
-  .main .servicios {
-    padding-top: 280px; }
 
   .main .menu article {
     width: 100%; }
@@ -401,6 +401,10 @@ footer .redes-sociales .contenedor .youtube:hover {
     top: -120px;
     /*Para subir la imagen*/ }
 
+  .main .acerca-de article {
+    width: 75%;
+    transform: translate(0px, 0px); }
+
   .main .acerca-de .contenedor article h3 {
     font-size: 34px;
     margin-bottom: 10px; }
@@ -421,6 +425,11 @@ footer .redes-sociales .contenedor .youtube:hover {
     /*Garantiza que el objeto que no cabe se ponga debajo y no que se reajuste en tamaño*/
     justify-content: center;
     /*Igual espaciado entre imagenes*/ }
+
+  .main .servicios .titulo,
+  .main .menu .titulo,
+  .main .ubicacion .titulo {
+    font-size: 30px; }
 
   .main .menu article {
     width: 100%; }
