@@ -9,6 +9,7 @@ body{
 .contenedor{
 	width: 85%;
 	max-width: 1000px;
+	min-width: 300px;
 	margin:auto ; /*Sirve para centrar el contenido*/
 	overflow: hidden;
 }
@@ -21,7 +22,7 @@ header{
 	width: 100%;
 	background: url('../img/15.jpg') rgba(219, 183, 183, 0.6);
 	background-size:cover ;
-	background-attachment:fixed ; 
+	background-attachment:fixed ; /*Fijar la imagen*/
 	background-position: center 0;
 
 	.contenedor{
@@ -48,57 +49,62 @@ header{
 		}
 	}
 
+
+	/*Uitlizamos flexbox*/
+	.contenedor-texto{
+		width: 100%;
+		display:flex;
+		justify-content:center;/*Centrar contenido* con flex verticalmente*/
+		align-content:center;/*centrar contenido con flex horizontalmente*/
+		margin:190px 0;	
+
+
+		.texto{
+			border:2px solid rgba(255,255,255,.5);
+			border-radius:5px;
+			display:inline-block;
+			text-align:center;
+			padding:20px 60px;	
+			position:absolute;
+			margin-top: -52px;
+
+
+			h1,h3{
+				color:#f3f4f7;
+				font-weight:300;
+				margin:0;
+			}
+
+			.nombre{
+
+				/*color:#ff4c4c;
+
+				-webkit-text-stroke: 0.5px #f3f4f7;
+				 -moz-text-stroke: 0.5px black #f3f4f7;
+				 text-stroke: 0.5px black #f3f4f7; */
+
+				 font-family: 'Holtwood One SC', serif;
+
+				margin-bottom:10px;
+				font-size:50px;
+				line-height:50px;
+				font-weight:bold;	
+			}
+
+
+			.tipo{
+				margin-bottom:10px;
+				font-size:28px;
+				line-height:25px;
+			}
+
+		}
+	}
+
 }
 
 
-/*Uitlizamos flexbox*/
-header .contenedor-texto{
-	width: 100%;
-	display:flex;
-	justify-content:center;/*Centrar contenido* con flex verticalmente*/
-	align-content:center;/*centrar contenido con flex horizontalmente*/
-	margin:190px 0;	
-}
-
-header .contenedor-texto .texto{
-	border:2px solid rgba(255,255,255,.5);
-	border-radius:5px;
-	display:inline-block;
-	text-align:center;
-	padding:20px 60px;	
-	position:absolute;
-	margin-top: -52px;
-}
-
-header .contenedor-texto .texto h1,
-header .contenedor-texto .texto h3
-{
-	color:#f3f4f7;
-	font-weight:300;
-	margin:0;
-}
-
-header .contenedor-texto .texto .nombre{
-
-	/*color:#ff4c4c;
-
-	-webkit-text-stroke: 0.5px #f3f4f7;
-	 -moz-text-stroke: 0.5px black #f3f4f7;
-	 text-stroke: 0.5px black #f3f4f7; */
-
-	 font-family: 'Holtwood One SC', serif;
-
-	margin-bottom:10px;
-	font-size:50px;
-	line-height:50px;
-	font-weight:bold;	
-}
-
-header .contenedor-texto .texto .tipo{
-	margin-bottom:10px;
-	font-size:28px;
-	line-height:25px;
-}
+	
 
 
 /********************************** */
@@ -108,6 +114,9 @@ header .contenedor-texto .texto .tipo{
 	background:url('../img/textura.jpg');
 	background-repeat:repeat;	
 
+	/********************************** */
+	/********* ACERCA  **************** */
+	/********************************** */
 	.acerca-de{
 
 
@@ -121,8 +130,8 @@ header .contenedor-texto .texto .tipo{
 			position:absolute; /*La foto esta mas arriba*/
 			left: 0;
 			top: -70px; /*Para subir la imagen*/
-			z-index: 0; /*Delante o detras de algun objeto. Posicion de profundidad*/
-			box-shadow: 0px 0px 15px rgba(0,0,0,0.35);
+			z-index: 0; /*Delante o detras de algun objeto. Posicion de profundidad*/			
+			box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
 
 			img{
 				width: 100%;
@@ -133,12 +142,13 @@ header .contenedor-texto .texto .tipo{
 		article{
 			background: #fff;
 			padding:40px;
-			width: 50%;
+			width: 40%;
 			position:relative;
-			/*top: 500px;*/
-			top: 300px;			
-			z-index: 1;/*Delante o detras de algun objeto. Posicion de profundidad*/
 			float: right;
+			top: 450px;
+			/*top: 220px;*/
+			z-index: 1;/*Delante o detras de algun objeto. Posicion de profundidad*/
+			-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
 			box-shadow: 0px 0px 15px rgba(0,0,0,0.35);
 
 			h3{
@@ -157,10 +167,220 @@ header .contenedor-texto .texto .tipo{
 		}
 
 	}
+
+
+	/********************************** */
+	/********* SERVICIOS  **************** */
+	/********************************** */
+	.servicios{
+		/*background:#f2f2f2;*/ /*Le cambiamos el color para direrenciar entre secciones. Mejora el diseño*/		
+		padding-top: 520px;
+
+		.contenedor{
+			overflow:hidden;			
+		}
+
+		.titulo{
+			/*font-family: 'Holtwood One SC', serif;*/
+			font-size:38px;
+			margin-bottom:40px;
+			font-weight:300;
+			color:#ff4c4c;
+			text-align:center;
+			line-height:34px;
+		}
+
+
+		.contenedor-servicios{
+			display:flex; /*Activamos flex*/
+			flex-direction:row; /*Ubicamos por filas*/
+			flex-wrap:wrap; /*Garantiza que el objeto que no cabe se ponga debajo y no que se reajuste en tamaño*/
+			justify-content:space-between; /*Igual espaciado entre imagenes*/
+
+			.servicio{
+				width:24%; /*Para que quepan 4 imagenes*/	
+				margin-bottom:40px;
+				float: left;
+
+				.thumb{
+					width:100%; /*Que ocupe el 100% del contenedor*/
+					margin-bottom:10px;	 /*Espaciado entre objetos de 10 px*/
+
+					img{
+						width:100%;
+						vertical-align:top;
+						border-radius:5px; /*Redondear el borde de la imagen*/
+						opacity:0.8; /*Poner una opacidad*/
+						border: 1px solid rgba(255, 255, 255, 0.5);
+					}
+
+					img:hover{
+						opacity:1; /*Con el paso del mouse cambiar la opacidad*/						
+						border: 1px solid rgba(255, 255, 255, 1);
+						-o-transition: all .3s ease;
+						-transition: all .3s ease;
+					}
+
+				}
+
+				.descripcion{
+					text-align:center;	
+				}
+
+				.nombreServicio{
+					font-weight:700;
+					color:#ff4c4c;
+					margin-bottom:10px;					
+				}
+
+				.nombreServicio:hover{					
+					font-size: 17px;
+				}
+
+				.categoriaServicio{
+					font-size:14px;	
+					color:#636363;	
+				}
+
+			}
+		}
+
+	}
+
+
+	/********************************** */
+	/********* MENU  **************** */
+	/********************************** */
+	.menu{
+		/*padding-top: 570px;*/
+
+		.titulo{
+			font-size:36px;
+			font-weight:300;
+			text-align:center;
+			margin-bottom:20px;		
+			color: #ff4c4c;				
+		}
+
+		.contenedor-menu, 
+		.contenedor-menu2{
+			border:1px solid #000; /*Borde externo para el recuadro*/
+			background: transparent;
+			padding: 10px;
+			overflow: hidden;			
+		}		
+
+		article{
+			width: 45%;
+			float: left;			
+			padding: 20px;
+		}
+
+		.categoria{
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 40px;
+			text-align: center;			
+			color:#000;
+		}
+
+		.plato{
+			margin-bottom: 30px;
+			padding: 20px;
+			border-bottom:3px dotted #000;
+			overflow: hidden;
+
+			.nombre{
+				font-size: 20px;
+				margin-bottom: 15px;
+				float: left;
+			}
+
+			.precio{
+				font-size: 20px;
+				margin-bottom: 15px;
+				float: right;
+			}
+
+			.descripcion{
+				font-size: 14px;
+				color: #676767;
+				clear: both;
+			}
+		}
+
+	}
+
+	/********************************** */
+	/********* UBICACION  **************** */
+	/********************************** */
+	.ubicacion{
+		background: #fff;
+		padding: 60px 0;
+		overflow: hidden;
+
+		.titulo{
+			text-align: center;
+			font-size: 40px;
+			line-height: 40px;
+			font-weight: 300;
+			color:#ff4c4c;
+		}
+
+		.direccion{
+			float: left;
+			width: 50%;
+			text-align: left;
+
+			.calle{
+				margin-bottom:15px;
+			}
+		}
+
+		.horario{
+			float: right;
+			width: 50%;
+			text-align: right;
+			overflow: hidden;
+
+			h4{
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.entre-semana,
+			.fin-semana
+			{
+				width: 50%;
+				float: left;
+				text-align: center;
+			}
+
+		}
+
+	}
+
+
+	/********************************** */
+	/********* MAPA  **************** */
+	/********************************** */
+	.mapa{
+		width: 100%;
+		overflow: hidden;
+
+		iframe{
+			width: 100%;
+			width-max:600px
+		}
+	}
+
 }
 
 
 
+
+
+	
 
 /********************************** */
 /********* FOOTER  **************** */
@@ -174,8 +394,9 @@ footer .copyright{
 	background:#1e2b38;
 	color: #fff;
 	text-align: center;
+	padding: 15px 0;
 	font-size: 12px;
-	margin: 0 0 0 0;
+	margin: 40px;
 }
 
 footer .redes-sociales .contenedor{
@@ -231,4 +452,181 @@ footer .redes-sociales .contenedor .instagram:hover{
 
 footer .redes-sociales .contenedor .youtube:hover{	
 	opacity:1;
+}
+
+
+
+
+
+/********************************** */
+/********* MEDIA QUERY  **************** */
+/********************************** */
+
+@media screen and (max-width:750px){
+	
+	header .contenedor{
+		position:static;
+		height: auto;
+	}
+
+	header .contenedor .contenedor-texto{
+		margin-top: 0px;		
+	}
+
+	header .contenedor .contenedor-texto .texto{
+		position:static;
+		margin: 100px 0;
+	}
+
+	header .contenedor .contenedor-texto .texto .nombre{
+		font-size: 34px;				
+	}
+
+	header .contenedor .contenedor-texto .texto .tipo{
+		font-size: 22px;		
+	}
+
+
+	header .contenedor .menu{
+		text-align:center;
+	}	
+
+	header .contenedor .menu a{
+		margin: 10px 15px;
+		font-size: 18px;
+	}
+	
+
+	.main .acerca-de .contenedor .foto{
+		width: 100%;
+		position:relative;
+	}
+
+	.main .acerca-de article{			
+		position:relative;
+		width: 100%;
+		top: -100px;
+		transform: translate(0px,0);
+	}
+	
+	.main .servicios .contenedor-servicios .servicio{
+		width:32%; /*Para que quepan 3 imagenes*/			
+	}	
+
+	.main .servicios{		
+		padding-top: 280px;
+	}
+
+	.main .menu article{		
+		width: 100%;
+	}
+
+	.main .mapa{
+		width: 80%;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width:450px){
+
+
+	
+
+	header .contenedor .contenedor-texto .texto .nombre{
+		font-size: 30px;				
+	}
+
+	header .contenedor .contenedor-texto .texto .tipo{
+		font-size: 20px;		
+	}
+
+	header .contenedor .menu{
+		text-align:center;		
+	}
+
+	header .contenedor .menu a{
+		margin: 5px 10px;
+		font-size: 14px;
+	}
+
+	.main .acerca-de .foto {
+		top: -120px; /*Para subir la imagen*/
+	}
+
+	.main .acerca-de .contenedor article h3{				
+		font-size: 34px;
+		margin-bottom: 10px;
+	}
+
+	.main .acerca-de .contenedor article p{				
+		font-size: 12px;
+	}
+
+			
+	.main .servicios .contenedor-servicios .servicio{
+		width:85%; /*Para que quepa 1 imagen*/					
+	}
+
+	.main .servicios .contenedor-servicios{
+		display:flex; /*Activamos flex*/
+		flex-direction:row; /*Ubicamos por filas*/
+		flex-wrap:wrap; /*Garantiza que el objeto que no cabe se ponga debajo y no que se reajuste en tamaño*/
+		justify-content:center; /*Igual espaciado entre imagenes*/
+	}
+
+
+
+	.main .menu article{		
+		width: 100%;
+	}
+
+	.main .mapa{
+		width: 80%;
+		margin: auto;
+	}
+
+	.menu {
+		.plato{
+			
+
+			.nombre{
+				font-size: 14px;	
+				line-height: 16px;			
+			}
+
+			.precio{
+				font-size: 14px;				
+				line-height: 16px;			
+			}
+
+			.descripcion{
+				font-size: 10px;				
+			}
+		}
+	}
+
+	.main .ubicacion{		
+
+		.direccion{			
+			width: 100%;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		.horario{
+			width: 100%;
+			text-align: center;
+		}
+	}
+		
+	
+	footer .redes-sociales .contenedor{
+		flex-wrap:wrap; /*Cuando llegue a 500 px poner los elementos uno debano de otros*/		
+		padding:20px 0;
+	}	
+	
+	footer .redes-sociales .contenedor a{
+		margin-bottom:25px;
+	}
+	
 }
