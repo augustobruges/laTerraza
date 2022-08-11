@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/normalize.css"> <!--Archivo que se descarga de http://necolas.github.io/normalize.css/ para resetear los estilos-->
 	<link rel="stylesheet" href="css/font-awesome.min.css">		
 	<link rel="stylesheet" href="css/estilos.css">		
+	<link rel="stylesheet" href="css/modal.css">		
 
 	<title>La Terrraza - Restobar</title>
 
@@ -229,23 +230,22 @@
 				<h3 class="titulo">Ubicación y Contacto</h3>
 				<div class="direccion">
 					<p class="calle">Avenida Santander<br>Frente a los tanques</p><br>
-					<p class="telefono">(+57) 315 3979405</p>
-					<p class="correo">mildre [@] gmail.com</p>					
+					<p class="telefono"><a href="https://wa.me/+573153979405" target="_blank" class="whatsapp">(+57) 315 3979405</a></p>
+					<p class="correo">mildre@gmail.com</p>					
 				</div>
 				<div class="horario">
 					<h4>Horarios</h4>
 					<p class="entre-semana">Lunes a Viernes <br>11:00 a.m - 09:00 p.m</p>
-					<p class="fin-semana">Sábados, Domingos y Festivos <br>10:00 a.m - 11:00 p.m</p>
+					<p class="fin-semana">Sábados, Domingos y Festivos <br>11:00 a.m - 11:00 p.m</p>
 				</div>
 			</div>	
 
 
 			<div class="redes-sociales">
 				<div class="contenedor">
-
 					<a href="https://wa.me/+573153979405" target="_blank" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
 					<a href="https://www.facebook.com/Restaurante-Bar-Caf%C3%A9-La-Terraza-118733706195554" target="_blank"  class="facebook"><i class="fa fa-facebook"></i></a>
-					<a href="#" class="instagram"><i class="fa fa-instagram"></i></i></a>					
+					<a href="https://instagram.com/laterraza_restaurantebar_?igshid=YmMyMTA2M2Y=" target="_blank" class="instagram"><i class="fa fa-instagram"></i></i></a>					
 				</div>
 			</div>
 
@@ -254,8 +254,6 @@
 		<section class="mapa">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.4788187609338!2d-72.65950865928949!3d7.358645622518033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e68813325fc67b9%3A0x2fb03c83e388bbc!2sLA%20TERRAZA!5e0!3m2!1ses!2sco!4v1659654569984!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</section>
-
-
 	</section>
 
 	<aside>		
@@ -265,7 +263,15 @@
 		<p class="copyright">Copyright Augusto Brugés Romero @ 2022</p>		
 	</footer>
 
-
+	<!--Si quiero que no se muestre el modal, quito la clase modal-show -->
+	<section class="modal " id="modal">
+		<div class="contenedor-modal">			
+			<img src="img/modal.png" alt="promocion">			
+			<!-- <h3 class="titulo-modal">Promoción del Día</h3>
+			<p class="parrafo-modal">Aplican condiciones y restricciones</p> -->
+			<div class="cerrar-modal" id="cerrar-modal">Cerrar</div>
+		</div>
+	</section>
 	
 
 </body>
@@ -273,5 +279,5 @@
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="js/terraza.js"></script>	
 	<script type="text/javascript" src="js/parallax.js"></script>		
-
+	<script type="text/javascript" src="js/modal.js"></script>		
 </html>

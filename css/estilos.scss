@@ -123,7 +123,6 @@ header{
 	/********************************** */
 	.acerca-de{
 
-
 		.contenedor{
 			overflow: visible; /*Para que la imagen no se corte y quede superpuesta*/
 			position:relative;
@@ -350,13 +349,24 @@ header{
 			margin-bottom: 40px;
 		}
 
+
+
 		.direccion{
 			float: left;
 			width: 50%;
 			text-align: left;
+			font-size: 18px;
 
 			.calle{
 				margin-bottom:15px;
+			}
+
+			a{				
+				text-decoration: none; /*Quitar el subrayado*/				
+			}
+
+			a:hover{			
+				text-decoration: underline; /*poner el subrayado*/
 			}
 		}
 
@@ -365,6 +375,7 @@ header{
 			width: 50%;
 			text-align: right;
 			overflow: hidden;
+			font-size: 18px;
 
 			h4{
 				text-align: center;
@@ -407,13 +418,16 @@ header{
 			opacity:0.8;
 		}
 
+
+
+
 		.redes-sociales .contenedor .facebook{
 			background:#1877f2;
 			opacity:0.8;
 		}
 
 		.redes-sociales .contenedor .instagram{
-			background:#405de6;
+			background:#c13584;
 			opacity:0.8;
 		}
 		
